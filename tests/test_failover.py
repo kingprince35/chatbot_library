@@ -7,8 +7,8 @@ from chatrelay import Chatbot, LLMError, build_providers
 
 @pytest.fixture(autouse=True)
 def keys(monkeypatch):
-    monkeypatch.setenv("GROQ_API_KEYS", "g1,g2")
-    monkeypatch.setenv("GEMINI_API_KEYS", "m1,m2")
+    monkeypatch.setenv("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,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", "g1,g2")
+    monkeypatch.setenv("AQ.Ab8RN6L-hgvlDA1teDwOjMw7OljAbaD6ww30uyXSezTwY92alg,AQ.Ab8RN6KugZFooESpmD_WJnYr65Lun92pUPJ39T25qqig7AYxxQ.", "m1,m2")
 
 
 def make_post(groq_status=200, gemini_status=200):
