@@ -3,6 +3,6 @@ from .chatbot import Chatbot
 from .providers import (BaseProvider, GeminiProvider, GroqProvider, LLMError,
                         RateLimitError, build_providers)
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __all__ = ["Chatbot", "BaseProvider", "GroqProvider", "GeminiProvider",
            "LLMError", "RateLimitError", "build_providers"]

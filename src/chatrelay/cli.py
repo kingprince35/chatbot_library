@@ -9,8 +9,8 @@ from . import Chatbot, LLMError, build_providers
 
 def main():
     try:
-        from dotenv import load_dotenv
-        load_dotenv()
+        from dotenv import find_dotenv, load_dotenv
+        load_dotenv(find_dotenv(usecwd=True))
     except ImportError:
         pass  # python-dotenv is optional; env vars still work
 
