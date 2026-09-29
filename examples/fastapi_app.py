@@ -1,9 +1,9 @@
-"""REST API example. pip install "groq-gemini-bridge[api]"
+"""REST API example. pip install "chatrelay[api]"
 Run: uvicorn fastapi_app:app --reload   Docs: http://127.0.0.1:8000/docs"""
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
-from groq_gemini_bridge import Chatbot, LLMError, build_providers
+from chatrelay import Chatbot, LLMError, build_providers
 
 app = FastAPI(title="Groq + Gemini Bridge")
 PROVIDERS = build_providers()

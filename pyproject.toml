@@ -3,14 +3,14 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "groq-gemini-bridge"
-version = "0.1.0"
+name = "chatrelay"
+version = "0.1.1"
 description = "Chatbot library that calls Groq and Gemini with multi-key automatic failover."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Prince Prajapati", email = "prajapatiprince982@gmail.com" }]
 keywords = ["groq", "gemini", "llm", "chatbot", "failover"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -25,10 +25,10 @@ api = ["fastapi", "uvicorn", "python-dotenv"]
 dev = ["pytest", "build", "twine"]
 
 [project.scripts]
-groq-gemini-chat = "groq_gemini_bridge.cli:main"
+chatrelay = "chatrelay.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/groq-gemini-bridge"
+Homepage = "https://github.com/kingprince35/chatbot_library"
 
 [tool.setuptools.packages.find]
 where = ["src"]

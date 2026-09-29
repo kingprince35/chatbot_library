@@ -2,7 +2,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from groq_gemini_bridge import Chatbot, LLMError, build_providers
+from chatrelay import Chatbot, LLMError, build_providers
 
 
 @pytest.fixture(autouse=True)

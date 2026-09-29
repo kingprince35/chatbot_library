@@ -1,4 +1,9 @@
-"""Terminal chatbot. Run: groq-gemini-chat   Commands: /groq /gemini /auto /reset /quit"""
+"""Terminal chatbot.
+One-shot:    chatrelay "What is Python?"
+Interactive: chatrelay   (commands: /groq /gemini /auto /reset /quit)
+"""
+import sys
+
 from . import Chatbot, LLMError, build_providers
 
 
@@ -10,6 +15,18 @@ def main():
         pass  # python-dotenv is optional; env vars still work
 
     bot = Chatbot(build_providers())
+
+    args = sys.argv[1:]
+    if args:
+        question = " ".join(args)
+        try:
+            r = bot.ask(question)
+            print(r["reply"])
+        except (LLMError, ValueError) as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+        return
+
     preferred = None
     print(f"Keys loaded: {list(bot.providers)}  (commands: /groq /gemini /auto /reset /quit)")
     while True:
